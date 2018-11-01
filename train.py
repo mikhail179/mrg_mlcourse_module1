@@ -106,7 +106,7 @@ w = initialize_weights(train_images)
 weights = np.empty((10, w.shape[0], w.shape[1]))
 
 #Running 10 binary classifiers
-#for 100 epochs, training time is ~8, f1 score = 0.94 (train), f1 score = 0.93 (predict)
+#for 100 epochs, training time is ~20 min, f1 score = 0.94 (train), f1 score = 0.93 (predict)
 for i in range(10):
     print('{} classifier'.format(i))
     weights[i] = stoh_grad_descent(train_images, labels[:, i], w, epochs=100, C=10000, lr = 0.0000001, number=i)
