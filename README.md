@@ -1,5 +1,8 @@
 # One-vs-all SVM
 Метод опорных векторов, добавляю квадратичные признаки, скалирование - деление всего на 255 (до добавления новых признаков). Использую стохастический градиентный спуск, градиент считается по одному объекту.
+Запуск:
+python train.py --x_train_dir=</dir> --y_train_dir=</dir> --model_output_dir=</dir>
+python predict.py --x_test_dir=</dir> --y_test_dir=</dir> --model_input_dir=</dir>
 Результаты на 100 эпохах (обучение ~20 минут):
 ### Train: 
                   precision    recall  f1-score   support
