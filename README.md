@@ -1,1 +1,1 @@
-# mrg_mlcourse_module1
+# One-vs-all SVM
