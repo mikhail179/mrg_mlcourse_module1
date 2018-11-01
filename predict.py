@@ -19,7 +19,7 @@ def final_prediction(X, w):
 parser = argparse.ArgumentParser()
 parser.add_argument('--x_test_dir', default='data/t10k-images.idx3-ubyte')
 parser.add_argument('--y_test_dir', default='data/t10k-labels.idx1-ubyte')
-parser.add_argument('--model_output_dir', default='model/weights.pkl')
+parser.add_argument('--model_input_dir', default='model/weights.pkl')
 args = parser.parse_args()
 
 with open(args.y_test_dir, 'rb') as flbl:
@@ -36,7 +36,7 @@ test_images = np.hstack((test_images, np.ones((test_images.shape[0], 1))))
 test_images = test_images.reshape(test_images.shape[0], test_images.shape[1], 1)
 
 
-pkl_filename = args.model_output_dir
+pkl_filename = args.model_input_dir
 with open(pkl_filename, 'rb') as file:  
     weights = pickle.load(file)
 
